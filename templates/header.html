@@ -1,0 +1,118 @@
+{{ define "header.html" }}
+<!DOCTYPE html>
+<html lang="en" class="has-navbar-fixed-top">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TROAY</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"
+    />
+  </head>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+  />
+  <link rel="stylesheet" href="/static/css/style.css" />
+  <body>
+    <!-- navbar -->
+    <nav class="navbar is-fixed-top box-shadow-y">
+      <div class="navbar-brand">
+        <a href="#" class="navbar-burger toggler">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+        <a href="#" class="navbar-item has-text-weight-bold has-text-black"
+          >TROAY</a
+        >
+        <a href="#" class="navbar-burger nav-toggler">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+      </div>
+      <div class="navbar-menu has-background-white">
+        <div class="navbar-end">
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a href="#" class="navbar-link">操作</a>
+            <div class="navbar-dropdown is-right">
+              <a href="/m/passwd" class="navbar-item">修改密码</a>
+            </div>
+            <div class="navbar-dropdown is-right">
+              <a href="/m/logout" class="navbar-item">退出登录</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- /navbar -->
+    <div class="columns is-variable is-0">
+      <!-- sidebar -->
+      <div>
+        <div class="menu-container px-1 has-background-white">
+          <div class="menu-warpper py-5">
+            <aside class="menu">
+              <p class="menu-label">后台</p>
+              <ul class="menu-list">
+                <li>
+                  <a href="/m"><i class="fa-solid fa-gauge-high"></i> 控制台</a>
+                </li>
+              </ul>
+              <p class="menu-label">分组</p>
+              <ul class="menu-list">
+                <li>
+                  <a href="/m/group"
+                    ><i class="fa-solid fa-gauge-high"></i> 分组列表</a
+                  >
+                </li>
+                <li>
+                  <a href="/m/group/add"
+                    ><i class="fa-solid fa-people-group"></i> 添加分组</a
+                  >
+                </li>
+              </ul>
+              <p class="menu-label">节点</p>
+              <ul class="menu-list">
+                <li>
+                  <a href="/m/node"
+                    ><i class="fa-solid fa-gauge-high"></i> 节点列表</a
+                  >
+                </li>
+                <li>
+                  <a href="/m/node/add"
+                    ><i class="fa-solid fa-people-group"></i> 添加节点</a
+                  >
+                </li>
+              </ul>
+              <p class="menu-label">优选IP</p>
+              <ul class="menu-list">
+                <li>
+                  <a href="/m/cfips"
+                    ><i class="fa-solid fa-gauge-high"></i> 设置</a
+                  >
+                </li>
+              </ul>
+            </aside>
+          </div>
+        </div>
+      </div>
+      <!-- /sidebar -->
+      <!-- content -->
+      <div
+        class="column is-10-desktop is-offset-2-desktop is-9-tablet is-offset-3-tablet is-12-mobile"
+      >
+        <div class="py-5">
+          <!-- title -->
+          <div class="container">
+            <div class="columns is-variable is-desktop">
+              <div class="column">
+                  <h1 class="title">{{ .title }}</h1>
+              </div>
+            </div>
+          </div>
+          <!--/title-->
+          <!-- body -->
+          <div class="container">
+{{end}}

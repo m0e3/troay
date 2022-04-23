@@ -1,0 +1,20 @@
+{{ template "header.html" . }}
+<table class="table is-fullwidth is-hoverable is-striped my-5">
+  <thead>
+    <tr>
+      <th>分组名称</th>
+      <th>操作</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>aaa</td>
+          <td>
+              <a href="/m/group/edit" class="button  is-small"><i class="fa-solid fa-pen-to-square"></i> 修改</a> 
+              <a href="/m/group/del" class="button is-danger is-small"><i class="fa-solid fa-trash"></i> 删除</a> 
+              <a href="/m/group/sub" class="button is-info  is-small"><i class="fa-solid fa-ear-listen"></i> 订阅</a> 
+          </td>
+      </tr>
+  </tbody>
+</table>
+{{ template "footer.html" . }}
