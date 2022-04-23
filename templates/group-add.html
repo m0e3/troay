@@ -1,0 +1,13 @@
+{{ template "header.html" . }}
+<form action="/m/group/add" method="post" class="my-5">
+    <div class="field">
+        <label class="label" for="name">分组名称</label>
+        <div class="control">
+            <input class="input" type="text" name="name" id="name" placeholder="分组名称" required>
+        </div>
+    </div>
+    <div class="control">
+        <button class="button is-primary">提交</button>
+    </div>
+</form>
+{{ template "footer.html" . }}
